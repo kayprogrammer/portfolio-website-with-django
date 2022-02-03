@@ -79,6 +79,9 @@ TEMPLATES = [
     },
 ]
 
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT = True
+
 WSGI_APPLICATION = 'kayweb.wsgi.application'
 
 
