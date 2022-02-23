@@ -1,6 +1,6 @@
-import email
 from django.db import models
 from django.utils import timezone
+from ckeditor.fields import RichTextField
 
 # Create your models here.
 
@@ -25,7 +25,7 @@ class About(models.Model):
 
 class Work(models.Model):
     title = models.CharField(max_length=100, null=True)
-    desc = models.TextField(null=True)
+    desc = models.RichTextField(null=True)
     image = models.ImageField(null=True)
     link = models.URLField(null=True, blank=True)
     date_created = models.DateTimeField(default=timezone.now)
@@ -35,7 +35,7 @@ class Work(models.Model):
 
 class Skill(models.Model):
     skill_name = models.CharField(max_length=100, null=True)
-    desc = models.TextField(null=True)
+    desc = models.RichTextField(null=True)
     image =  models.ImageField(null=True)
     image_hover =  models.ImageField(null=True)
     date_created = models.DateTimeField(default=timezone.now)
@@ -46,7 +46,7 @@ class Skill(models.Model):
 class Portfolio(models.Model):
     title = models.CharField(max_length=100, null=True)
     link = models.URLField(max_length=700, null=True, blank=True)
-    desc = models.TextField(null=True)
+    desc = models.RichTextField(null=True)
     image = models.ImageField(upload_to='portfolio/', null=True)
     web = models.BooleanField(default=False)
     mobile = models.BooleanField(default=False)
