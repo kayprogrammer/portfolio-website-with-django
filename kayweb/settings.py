@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'sweetify',
     'cloudinary',
     'cloudinary_storage',
+    'ckeditor',
 ]
 
 SWEETIFY_SWEETALERT_LIBRARY = 'sweetalert2'
@@ -141,6 +142,21 @@ USE_L10N = True
 
 USE_TZ = True
 
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Custom',
+        'width':'100%',
+        'height':'300',
+        'removePlugins':"exportpdf",
+        'toolbar_Custom': [
+            ['Styles','Format','Font','FontSize', 'Bold','Italic','Underline','StrikeThrough','-','Undo','Redo','-','Find','Replace','-','Outdent','Indent',],
+            '/',    
+            ['NumberedList','BulletedList','-','JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],
+            ['Image','Table','-','Link','Flash','Smiley','TextColor','BGColor','Source']
+         
+        ]
+    },
+}
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
