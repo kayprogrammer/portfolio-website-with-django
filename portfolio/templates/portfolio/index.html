@@ -132,7 +132,7 @@ https://templatemo.com/tm-531-reflux
               <div class="col-md-6">
                 <div class="right-text">
                   <h4>{{w.title}}</h4>
-                  <p>{{w.desc}}</p>
+                  <p>{{w.desc|safe}}</p>
                   <div class="white-button">
                     {% if w.link == None %}
                     <a href="#" >Inactive</a>
@@ -150,7 +150,7 @@ https://templatemo.com/tm-531-reflux
               <div class="col-md-6">
                 <div class="left-text">
                   <h4>{{w.title}}</h4>
-                  <p>{{w.desc}}</p>
+                  <p>{{w.desc|safe}}</p>
                   <div class="white-button">
                     {% if w.link == None %}
                     <a href="#">Inactive</a>
@@ -187,7 +187,7 @@ https://templatemo.com/tm-531-reflux
               <div class="service-item">
                 <div id="skill-icon-{{s.id}}" class="first-service-icon service-icon"></div>
                 <h4>{{s.skill_name}}</h4>
-                <p>{{s.desc}}</p>
+                <p>{{s.desc|safe}}</p>
               </div>
             </div>
             {% endfor %}
@@ -257,7 +257,7 @@ https://templatemo.com/tm-531-reflux
                         ><i class="fa fa-search"></i
                       ></a>
                       <h4>{{p.title}}</h4>
-                      <span>{{p.desc}}</span>
+                      <span>{{p.desc|safe}}</span>
                       <a class="btn btn-primary btn-sm mt-2" target="_blank" href="{{p.link}}" style="color: white;">Access</a>
                     </figcaption>
                   </figure>
